@@ -1,0 +1,7 @@
+venv/
+.vscode/
+assets/
+__pycache__/
+deprecated/
+*debug*
+*.png

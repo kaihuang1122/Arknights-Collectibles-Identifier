@@ -1,0 +1,5 @@
+tqdm
+numpy
+selenium
+requests
+opencv-python
