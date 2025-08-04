@@ -70,7 +70,7 @@ if __name__ == '__main__':
         exit(1)
     path = f"./assets/IS{args.IS}_Collectibles.json"
     SHOW = args.show
-    img = cv2.imread(args.img_path)
+    start_match()
     with open(path, 'r', encoding='utf-8') as f:
         collectibles = json.load(f)
     count = 0
