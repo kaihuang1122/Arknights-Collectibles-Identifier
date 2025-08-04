@@ -5,3 +5,4 @@ __pycache__/
 deprecated/
 *debug*
 *.png
+.DS_Store
