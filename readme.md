@@ -12,9 +12,9 @@
 
 * 基於 `prts.wiki` 的藏品圖像與名稱，本專案會分析圖像中含有哪些藏品，並以簡體中文輸出，適合用來分析結局畫面。
 
-* Since the limitation of SIFT, we only tune at books classification. Some of the collectibles are not able to be identified.
+* Based on location information, we will make a rough guess for the collectibles that could not be located.
 
-* 由於 SIFT 技術的限制，目前僅針對書本進行特別優化，部分藏品容易無法辨識。
+* 基於位置資訊，我們會對未能找到的藏品，並給出不太準確的猜測。
 
 ## Prerequisites / 前置需求
 * Ensure you have Google Chrome 133.0 or higher installed. / 請確保您的電腦已安裝 Google Chrome 133.0 或以上版本。
@@ -64,10 +64,25 @@
     ```
 
 
-6. **Run the code**: / **執行程式**：  
+6. **Run the matching code**: / **執行辨識程式**：  
     ```bash
     python match.py --img_path <your-image-path> --IS <which-IS>
     ```
+
+    You can add some arguments based on the following description / 您可以根據以下描述添加一些參數
+    ```bash
+    usage: match.py [-h] --img_path IMG_PATH [--IS IS] [--show] [--show-metrics]
+
+    Match collectibles in a screenshot.
+
+    options:
+    -h, --help           show this help message and exit
+    --img_path IMG_PATH  Directory containing collectible templates.
+    --IS IS              IS version (default: Sui's Garden of Grotesqueries)
+    --show               Show matching results.
+    --show-metrics       Display detailed matching metrics.
+    ```
+
 
 
 ## Future works
